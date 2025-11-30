@@ -1,0 +1,156 @@
+export class LoginPage {
+  constructor(page, config) {
+    this.page = page;
+    this.config = config;
+    this.selectors = config.selectors;
+    this.text = config.text;
+  }
+
+  // Navigation
+  async goto() {
+    await this.page.goto(this.config.baseURL);
+    await this.page.waitForLoadState('networkidle');
+  }
+
+  async openLoginModal() {
+    if (!this.config.features?.hasModal) {
+      throw new Error('This site does not have a login modal');
+    }
+
+    const loginBtn = this.page.locator(this.selectors.loginButton);
+    await loginBtn.click();
+
+    const modal = this.page.locator(this.selectors.loginModal);
+    await modal.waitFor({ state: 'visible', timeout: 5000 });
+  }
+
+  async closeLoginModal() {
+    if (!this.config.features?.hasModal) {
+      return;
+    }
+
+    const closeBtn = this.page.locator(this.selectors.closeModal);
+    await closeBtn.click();
+
+    const modal = this.page.locator(this.selectors.loginModal);
+    await modal.waitFor({ state: 'hidden', timeout: 5000 });
+  }
+
+  // Login actions
+  async fillEmail(email) {
+    if (!this.selectors.emailInput) {
+      throw new Error('Email input not available for this site');
+    }
+    
+    const input = this.page.locator(this.selectors.emailInput).first();
+    await input.fill(email);
+  }
+
+  async fillPassword(password) {
+    if (!this.selectors.passwordInput) {
+      throw new Error('Password input not available for this site');
+    }
+    
+    const input = this.page.locator(this.selectors.passwordInput);
+    await input.fill(password);
+  }
+
+  async fillUsername(username) {
+    if (!this.selectors.usernameInput) {
+      return; // Skip if not available
+    }
+    
+    const input = this.page.locator(this.selectors.usernameInput);
+    await input.fill(username);
+  }
+
+  async submit() {
+    const button = this.page.locator(this.selectors.submitButton);
+    await button.click();
+    
+    // Wait for response
+    await this.page.waitForTimeout(1500);
+  }
+
+  async login(email, password) {
+    if (this.config.features?.hasModal) {
+      await this.openLoginModal();
+    }
+
+    await this.fillEmail(email);
+    await this.fillPassword(password);
+    await this.submit();
+  }
+
+  // Error/Success checks
+  async getErrorMessage() {
+    const errorEl = this.page.locator(this.selectors.errorMessage);
+    
+    try {
+      await errorEl.waitFor({ state: 'visible', timeout: 3000 });
+      return await errorEl.textContent();
+    } catch {
+      return null;
+    }
+  }
+
+  async getSuccessMessage() {
+    const successEl = this.page.locator(this.selectors.successMessage);
+    
+    try {
+      await successEl.waitFor({ state: 'visible', timeout: 3000 });
+      return await successEl.textContent();
+    } catch {
+      return null;
+    }
+  }
+
+  async isLoggedIn() {
+    // Check if logout button is visible (indicates logged in state)
+    if (this.selectors.logoutButton) {
+      return await this.page.locator(this.selectors.logoutButton).isVisible({ timeout: 2000 }).catch(() => false);
+    }
+
+    // Alternative: check if login button is hidden
+    return await this.page.locator(this.selectors.loginButton).isHidden({ timeout: 2000 }).catch(() => false);
+  }
+
+  async logout() {
+    if (!this.selectors.logoutButton) {
+      throw new Error('Logout button not available for this site');
+    }
+
+    const logoutBtn = this.page.locator(this.selectors.logoutButton);
+    await logoutBtn.click();
+    await this.page.waitForTimeout(1000);
+  }
+
+  // Registration
+  async openRegister() {
+    if (!this.config.features?.hasRegisterLink) {
+      throw new Error('Register link not available for this site');
+    }
+
+    const registerBtn = this.page.locator(this.selectors.registerButton);
+    await registerBtn.click();
+    await this.page.waitForLoadState('networkidle');
+  }
+
+  async clearLoginForm() {
+    const emailInput = this.page.locator(this.selectors.emailInput).first();
+    const passwordInput = this.page.locator(this.selectors.passwordInput);
+
+    await emailInput.clear();
+    await passwordInput.clear();
+  }
+
+  // Utility
+  async waitForLoginForm() {
+    const form = this.page.locator(this.selectors.loginForm);
+    await form.waitFor({ state: 'visible', timeout: 5000 });
+  }
+
+  async getLoginButton() {
+    return this.page.locator(this.selectors.loginButton);
+  }
+}
