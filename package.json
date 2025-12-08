@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "example.spec.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,9 +16,6 @@
     "test": "tests"
   },
   "dependencies": {
-    "fsevents": "^2.3.2",
-    "playwright": "^1.56.1",
-    "playwright-core": "^1.56.1",
-    "undici-types": "^7.16.0"
+    "playwright": "^1.56.1"
   }
 }

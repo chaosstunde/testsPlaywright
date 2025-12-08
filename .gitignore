@@ -1,8 +1,39 @@
-
-# Playwright
+# --- Node ---
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# --- Playwright ---
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+playwright/.output/
+trace.zip
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- VSCode ---
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# --- Logs ---
+logs/
+*.log
+*.tmp
+
+# --- Environment Files ---
+.env
+.env.local
+.env.*.local
+package-lock.json
+
