@@ -1,0 +1,596 @@
+{
+  "generatedAt": "2026-01-04T16:37:11.407Z",
+  "projectName": "url-g09",
+  "testedUrl": "https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/",
+  "stats": {
+    "total": 18,
+    "passed": 17,
+    "failed": 1,
+    "skipped": 0,
+    "other": 0,
+    "durationMs": 22407
+  },
+  "tests": [
+    {
+      "title": "Server-Login funktioniert",
+      "titlePath": [
+        "",
+        "url-g09",
+        "loginapi.spec.js",
+        "Server-Login funktioniert"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js",
+        "line": 3,
+        "column": 5
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "failed",
+          "duration": 116,
+          "startTime": "2026-01-04T16:36:49.817Z",
+          "retry": 0,
+          "workerIndex": 20,
+          "parallelIndex": 0,
+          "error": {
+            "message": "Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n",
+            "stack": "Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n\n    at C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js:5:34",
+            "location": {
+              "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js",
+              "column": 34,
+              "line": 5
+            },
+            "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m'Server-Login funktioniert'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[90m// Anfrage an die Login-API\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m'https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php'\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m   |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     data\u001b[33m:\u001b[39m {\n \u001b[90m 7 |\u001b[39m       username\u001b[33m:\u001b[39m \u001b[32m'testuser'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 8 |\u001b[39m       password\u001b[33m:\u001b[39m \u001b[32m'123'\u001b[39m\u001b[0m"
+          },
+          "errors": [
+            {
+              "message": "Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n",
+              "stack": "Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n\n    at C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js:5:34",
+              "location": {
+                "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js",
+                "column": 34,
+                "line": 5
+              },
+              "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m'Server-Login funktioniert'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[90m// Anfrage an die Login-API\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m'https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php'\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m   |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     data\u001b[33m:\u001b[39m {\n \u001b[90m 7 |\u001b[39m       username\u001b[33m:\u001b[39m \u001b[32m'testuser'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 8 |\u001b[39m       password\u001b[33m:\u001b[39m \u001b[32m'123'\u001b[39m\u001b[0m"
+            }
+          ],
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "Login über UI schlägt fehl (mit Mock)",
+      "titlePath": [
+        "",
+        "url-g09",
+        "login-error.spec.js",
+        "Login über UI schlägt fehl (mit Mock)"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\login-error.spec.js",
+        "line": 3,
+        "column": 5
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1275,
+          "startTime": "2026-01-04T16:36:48.836Z",
+          "retry": 0,
+          "workerIndex": 18,
+          "parallelIndex": 7,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "Login über UI funktioniert (mit Mock)",
+      "titlePath": [
+        "",
+        "url-g09",
+        "login.spec.js",
+        "Login über UI funktioniert (mit Mock)"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\login.spec.js",
+        "line": 3,
+        "column": 5
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1343,
+          "startTime": "2026-01-04T16:36:49.232Z",
+          "retry": 0,
+          "workerIndex": 19,
+          "parallelIndex": 2,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "Die Webseite hat ein sichtbares Suchfeld",
+      "titlePath": [
+        "",
+        "url-g09",
+        "suche.spec.js",
+        "Suchfunktion – Basis- und Funktionstests",
+        "Die Webseite hat ein sichtbares Suchfeld"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\suche.spec.js",
+        "line": 16,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1400,
+          "startTime": "2026-01-04T16:36:50.054Z",
+          "retry": 0,
+          "workerIndex": 21,
+          "parallelIndex": 5,
+          "stdout": [
+            {
+              "text": "🔍 Suchfeld gefunden über: input[type=\"search\"]\n"
+            }
+          ],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "Man kann einen Suchbegriff eingeben",
+      "titlePath": [
+        "",
+        "url-g09",
+        "suche.spec.js",
+        "Suchfunktion – Basis- und Funktionstests",
+        "Man kann einen Suchbegriff eingeben"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\suche.spec.js",
+        "line": 50,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1419,
+          "startTime": "2026-01-04T16:36:50.490Z",
+          "retry": 0,
+          "workerIndex": 22,
+          "parallelIndex": 1,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should display cart button with initial count",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should display cart button with initial count"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 14,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1371,
+          "startTime": "2026-01-04T16:36:51.085Z",
+          "retry": 0,
+          "workerIndex": 24,
+          "parallelIndex": 4,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should open cart popup and display items",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should open cart popup and display items"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 94,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2539,
+          "startTime": "2026-01-04T16:36:50.243Z",
+          "retry": 0,
+          "workerIndex": 18,
+          "parallelIndex": 7,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "Die Suche zeigt Suchergebnisse an (falls unterstützt)",
+      "titlePath": [
+        "",
+        "url-g09",
+        "suche.spec.js",
+        "Suchfunktion – Basis- und Funktionstests",
+        "Die Suche zeigt Suchergebnisse an (falls unterstützt)"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\suche.spec.js",
+        "line": 64,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2951,
+          "startTime": "2026-01-04T16:36:50.682Z",
+          "retry": 0,
+          "workerIndex": 23,
+          "parallelIndex": 6,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should add item to cart from product listing",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should add item to cart from product listing"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 28,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2627,
+          "startTime": "2026-01-04T16:36:51.195Z",
+          "retry": 0,
+          "workerIndex": 25,
+          "parallelIndex": 3,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should add multiple quantities of item to cart",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should add multiple quantities of item to cart"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 60,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2536,
+          "startTime": "2026-01-04T16:36:51.336Z",
+          "retry": 0,
+          "workerIndex": 26,
+          "parallelIndex": 0,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should close cart popup when X button is clicked",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should close cart popup when X button is clicked"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 309,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1670,
+          "startTime": "2026-01-04T16:36:52.806Z",
+          "retry": 0,
+          "workerIndex": 18,
+          "parallelIndex": 7,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should increase item quantity in cart",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should increase item quantity in cart"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 133,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3939,
+          "startTime": "2026-01-04T16:36:50.711Z",
+          "retry": 0,
+          "workerIndex": 19,
+          "parallelIndex": 2,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should display correct total price calculation",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should display correct total price calculation"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 262,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2474,
+          "startTime": "2026-01-04T16:36:52.573Z",
+          "retry": 0,
+          "workerIndex": 24,
+          "parallelIndex": 4,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should decrease item quantity in cart",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should decrease item quantity in cart"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 173,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3936,
+          "startTime": "2026-01-04T16:36:51.601Z",
+          "retry": 0,
+          "workerIndex": 21,
+          "parallelIndex": 5,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should show empty cart message when cart is empty",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should show empty cart message when cart is empty"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 397,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1930,
+          "startTime": "2026-01-04T16:36:53.998Z",
+          "retry": 0,
+          "workerIndex": 26,
+          "parallelIndex": 0,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should remove item when quantity reaches 0",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should remove item when quantity reaches 0"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 217,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4389,
+          "startTime": "2026-01-04T16:36:52.038Z",
+          "retry": 0,
+          "workerIndex": 22,
+          "parallelIndex": 1,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should prevent adding more than available stock",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should prevent adding more than available stock"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 368,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2516,
+          "startTime": "2026-01-04T16:36:53.944Z",
+          "retry": 0,
+          "workerIndex": 25,
+          "parallelIndex": 3,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "should navigate to checkout from cart",
+      "titlePath": [
+        "",
+        "url-g09",
+        "warenkorb.spec.js",
+        "Shopping Cart Functionality",
+        "should navigate to checkout from cart"
+      ],
+      "location": {
+        "file": "C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\warenkorb.spec.js",
+        "line": 326,
+        "column": 7
+      },
+      "expectedStatus": "passed",
+      "timeout": 30000,
+      "annotations": [],
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3820,
+          "startTime": "2026-01-04T16:36:53.764Z",
+          "retry": 0,
+          "workerIndex": 23,
+          "parallelIndex": 6,
+          "stdout": [],
+          "stderr": [],
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,3108 +1,3434 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Playwright Testreport – Historie</title>
   <style>
-    body { font-family: Arial; margin: 20px; }
-    h1 { margin-bottom: 10px; }
-    .run-section { margin-bottom: 40px; }
-    summary { cursor: pointer; font-weight: bold; padding: 5px; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-    th, td { border: 1px solid #aaa; padding: 8px; }
-    th { background: #ddd; }
-    .passed { color: green; font-weight: bold; }
-    .failed { color: red; font-weight: bold; }
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { margin-bottom: 6px; }
+    .meta { color: #555; margin-bottom: 16px; }
+    .run { margin: 24px 0 40px; }
+    details.site { border: 1px solid #bbb; border-radius: 8px; padding: 10px 12px; margin: 12px 0; }
+    details.test { border: 1px solid #ddd; border-radius: 8px; padding: 8px 10px; margin: 8px 0; background: #fafafa; }
+    summary { cursor: pointer; font-weight: bold; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; vertical-align: top; }
+    th { background: #f2f2f2; }
+    .passed { font-weight: bold; color: green; }
+    .failed { font-weight: bold; color: red; }
+    .skipped { font-weight: bold; color: #777; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; border: 1px solid #ccc; margin-left: 8px; font-size: 12px; color: #333; }
+    .url { word-break: break-all; }
+    pre { white-space: pre-wrap; margin: 6px 0 0; }
+    .small { color: #666; font-size: 12px; }
   </style>
 </head>
 <body>
-<h1>Playwright Testreport – Historie</h1>
+  <h1>Playwright Testreport – Historie</h1>
+  <div class="meta">Wird bei jedem Lauf erweitert. Quelle: <code>tests-results/results-url-*.json</code></div>
+
 
 <hr/>
-<div class="run-section">
-<h2>Testlauf vom 8.12.2025, 14:25:09</h2>
+<div class="run">
+  <h2 style="margin:0;">Testlauf vom 4.1.2026, 17:24:01</h2>
+  <div class="small">generatedAt: <code>2026-01-04T16:24:01.328Z</code></div>
+  <div style="margin-top:8px;">
+    <span class="pill">Total: 0</span>
+    <span class="pill passed">Passed: 0</span>
+    <span class="pill failed">Failed: 0</span>
+    <span class="pill skipped">Skipped: 0</span>
+    <span class="pill">Other: 0</span>
+  </div>
 
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/ (22 Tests)</summary>
+  <details class="site">
+    <summary>
+      <span class="url">http://localhost:5173/</span>
+      <span class="pill">url-local</span>
+      <span class="pill passed">P: 0</span>
+      <span class="pill failed">F: 0</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 0</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="http://localhost:5173/" target="_blank" rel="noreferrer">http://localhost:5173/</a></div>
+
     <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
   
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3205</td>
-        <td>8.12.2025, 14:24:18</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3210</td>
-        <td>8.12.2025, 14:24:19</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3205</td>
-        <td>8.12.2025, 14:24:19</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3203</td>
-        <td>8.12.2025, 14:24:19</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3174</td>
-        <td>8.12.2025, 14:24:19</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3180</td>
-        <td>8.12.2025, 14:24:20</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3175</td>
-        <td>8.12.2025, 14:24:20</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1429</td>
-        <td>8.12.2025, 14:24:23</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1362</td>
-        <td>8.12.2025, 14:24:23</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2796</td>
-        <td>8.12.2025, 14:24:22</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1359</td>
-        <td>8.12.2025, 14:24:24</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2515</td>
-        <td>8.12.2025, 14:24:24</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2495</td>
-        <td>8.12.2025, 14:24:24</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2492</td>
-        <td>8.12.2025, 14:24:24</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>3880</td>
-        <td>8.12.2025, 14:24:24</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>3816</td>
-        <td>8.12.2025, 14:24:25</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>4279</td>
-        <td>8.12.2025, 14:24:25</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2382</td>
-        <td>8.12.2025, 14:24:25</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1620</td>
-        <td>8.12.2025, 14:24:25</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>3828</td>
-        <td>8.12.2025, 14:24:27</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2386</td>
-        <td>8.12.2025, 14:24:27</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2039</td>
-        <td>8.12.2025, 14:24:27</td>
-      </tr>
-    
+      </tbody>
     </table>
   </details>
-  <br/>
   
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/ (22 Tests)</summary>
+  <details class="site">
+    <summary>
+      <span class="url">https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/</span>
+      <span class="pill">url-g05</span>
+      <span class="pill passed">P: 0</span>
+      <span class="pill failed">F: 0</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 0</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/" target="_blank" rel="noreferrer">https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/</a></div>
+
     <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
   
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3198</td>
-        <td>8.12.2025, 14:24:28</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3179</td>
-        <td>8.12.2025, 14:24:29</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3173</td>
-        <td>8.12.2025, 14:24:29</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3166</td>
-        <td>8.12.2025, 14:24:30</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3182</td>
-        <td>8.12.2025, 14:24:30</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3203</td>
-        <td>8.12.2025, 14:24:30</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3194</td>
-        <td>8.12.2025, 14:24:30</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1345</td>
-        <td>8.12.2025, 14:24:33</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1277</td>
-        <td>8.12.2025, 14:24:33</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2931</td>
-        <td>8.12.2025, 14:24:34</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1340</td>
-        <td>8.12.2025, 14:24:34</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2633</td>
-        <td>8.12.2025, 14:24:34</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2491</td>
-        <td>8.12.2025, 14:24:35</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2617</td>
-        <td>8.12.2025, 14:24:35</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3819</td>
-        <td>8.12.2025, 14:24:34</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3842</td>
-        <td>8.12.2025, 14:24:34</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>4403</td>
-        <td>8.12.2025, 14:24:35</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2378</td>
-        <td>8.12.2025, 14:24:35</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1693</td>
-        <td>8.12.2025, 14:24:37</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3876</td>
-        <td>8.12.2025, 14:24:37</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2375</td>
-        <td>8.12.2025, 14:24:37</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2034</td>
-        <td>8.12.2025, 14:24:37</td>
-      </tr>
-    
+      </tbody>
     </table>
   </details>
-  <br/>
   
-  <details>
-    <summary>Getestete Webseite: http://localhost:5173/ (22 Tests)</summary>
+  <details class="site">
+    <summary>
+      <span class="url">https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/</span>
+      <span class="pill">url-g09</span>
+      <span class="pill passed">P: 0</span>
+      <span class="pill failed">F: 0</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 0</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/" target="_blank" rel="noreferrer">https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/</a></div>
+
     <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
   
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3197</td>
-        <td>8.12.2025, 14:24:39</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3166</td>
-        <td>8.12.2025, 14:24:39</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3194</td>
-        <td>8.12.2025, 14:24:39</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3164</td>
-        <td>8.12.2025, 14:24:40</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3173</td>
-        <td>8.12.2025, 14:24:40</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3172</td>
-        <td>8.12.2025, 14:24:40</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3175</td>
-        <td>8.12.2025, 14:24:41</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1367</td>
-        <td>8.12.2025, 14:24:43</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1339</td>
-        <td>8.12.2025, 14:24:44</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2895</td>
-        <td>8.12.2025, 14:24:44</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1374</td>
-        <td>8.12.2025, 14:24:44</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2504</td>
-        <td>8.12.2025, 14:24:43</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2571</td>
-        <td>8.12.2025, 14:24:45</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2461</td>
-        <td>8.12.2025, 14:24:45</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3795</td>
-        <td>8.12.2025, 14:24:44</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3861</td>
-        <td>8.12.2025, 14:24:45</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>4280</td>
-        <td>8.12.2025, 14:24:45</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2438</td>
-        <td>8.12.2025, 14:24:46</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1641</td>
-        <td>8.12.2025, 14:24:46</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3839</td>
-        <td>8.12.2025, 14:24:47</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2381</td>
-        <td>8.12.2025, 14:24:48</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1990</td>
-        <td>8.12.2025, 14:24:48</td>
-      </tr>
-    
+      </tbody>
     </table>
   </details>
-  <br/>
   
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/ (22 Tests)</summary>
+  <details class="site">
+    <summary>
+      <span class="url">https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/</span>
+      <span class="pill">url-g12</span>
+      <span class="pill passed">P: 0</span>
+      <span class="pill failed">F: 0</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 0</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/" target="_blank" rel="noreferrer">https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/</a></div>
+
     <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
   
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3192</td>
-        <td>8.12.2025, 14:24:49</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3190</td>
-        <td>8.12.2025, 14:24:49</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3184</td>
-        <td>8.12.2025, 14:24:49</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3210</td>
-        <td>8.12.2025, 14:24:50</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3179</td>
-        <td>8.12.2025, 14:24:51</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3187</td>
-        <td>8.12.2025, 14:24:51</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3172</td>
-        <td>8.12.2025, 14:24:51</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1310</td>
-        <td>8.12.2025, 14:24:54</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1400</td>
-        <td>8.12.2025, 14:24:54</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2896</td>
-        <td>8.12.2025, 14:24:53</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1374</td>
-        <td>8.12.2025, 14:24:55</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2549</td>
-        <td>8.12.2025, 14:24:55</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2520</td>
-        <td>8.12.2025, 14:24:55</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2452</td>
-        <td>8.12.2025, 14:24:54</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>3842</td>
-        <td>8.12.2025, 14:24:55</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>3779</td>
-        <td>8.12.2025, 14:24:55</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>4313</td>
-        <td>8.12.2025, 14:24:55</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2475</td>
-        <td>8.12.2025, 14:24:56</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1596</td>
-        <td>8.12.2025, 14:24:56</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>3852</td>
-        <td>8.12.2025, 14:24:57</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2444</td>
-        <td>8.12.2025, 14:24:58</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1912</td>
-        <td>8.12.2025, 14:24:58</td>
-      </tr>
-    
+      </tbody>
     </table>
   </details>
-  <br/>
   
 </div>
-</body>
-</html>
+
+
 
 <hr/>
-<div class="run-section">
-<h2>Testlauf vom 8.12.2025, 14:26:34</h2>
+<div class="run">
+  <h2 style="margin:0;">Testlauf vom 4.1.2026, 17:31:05</h2>
+  <div class="small">generatedAt: <code>2026-01-04T16:31:05.484Z</code></div>
+  <div style="margin-top:8px;">
+    <span class="pill">Total: 0</span>
+    <span class="pill passed">Passed: 0</span>
+    <span class="pill failed">Failed: 0</span>
+    <span class="pill skipped">Skipped: 0</span>
+    <span class="pill">Other: 0</span>
+  </div>
 
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/ (22 Tests)</summary>
+  <details class="site">
+    <summary>
+      <span class="url">http://localhost:5173/</span>
+      <span class="pill">url-local</span>
+      <span class="pill passed">P: 0</span>
+      <span class="pill failed">F: 0</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 0</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="http://localhost:5173/" target="_blank" rel="noreferrer">http://localhost:5173/</a></div>
+
     <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+      </tbody>
+    </table>
+  </details>
+  
+  <details class="site">
+    <summary>
+      <span class="url">https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/</span>
+      <span class="pill">url-g05</span>
+      <span class="pill passed">P: 0</span>
+      <span class="pill failed">F: 0</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 0</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/" target="_blank" rel="noreferrer">https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/</a></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+      </tbody>
+    </table>
+  </details>
+  
+  <details class="site">
+    <summary>
+      <span class="url">https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/</span>
+      <span class="pill">url-g09</span>
+      <span class="pill passed">P: 0</span>
+      <span class="pill failed">F: 0</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 0</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/" target="_blank" rel="noreferrer">https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/</a></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+      </tbody>
+    </table>
+  </details>
+  
+  <details class="site">
+    <summary>
+      <span class="url">https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/</span>
+      <span class="pill">url-g12</span>
+      <span class="pill passed">P: 0</span>
+      <span class="pill failed">F: 0</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 0</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/" target="_blank" rel="noreferrer">https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/</a></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+      </tbody>
+    </table>
+  </details>
+  
+</div>
+
+
+
+<hr/>
+<div class="run">
+  <h2 style="margin:0;">Testlauf vom 4.1.2026, 17:37:21</h2>
+  <div class="small">generatedAt: <code>2026-01-04T16:37:21.480Z</code></div>
+  <div style="margin-top:8px;">
+    <span class="pill">Total: 72</span>
+    <span class="pill passed">Passed: 68</span>
+    <span class="pill failed">Failed: 4</span>
+    <span class="pill skipped">Skipped: 0</span>
+    <span class="pill">Other: 0</span>
+  </div>
+
+  <details class="site">
+    <summary>
+      <span class="url">http://localhost:5173/</span>
+      <span class="pill">url-local</span>
+      <span class="pill passed">P: 17</span>
+      <span class="pill failed">F: 1</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 18</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="http://localhost:5173/" target="_blank" rel="noreferrer">http://localhost:5173/</a></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
   
       <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g05</td>
         <td class="failed">failed</td>
-        <td>3201</td>
-        <td>8.12.2025, 14:25:39</td>
+        <td> › url-local › loginapi.spec.js › Server-Login funktioniert</td>
+        <td>undefined:undefined:undefined</td>
+        <td>114</td>
+        <td>4.1.2026, 17:36:56</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="failed">failed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 114ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:56</span>
+              </div>
+
+              <div style="margin-top:6px;"><b>Error message:</b><pre>Error: apiRequestContext.post: unable to verify the first certificate
+Call log:
+[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php[22m
+[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36[22m
+[2m    - accept: */*[22m
+[2m    - accept-encoding: gzip,deflate,br[22m
+[2m    - content-type: application/json[22m
+[2m    - content-length: 40[22m
+</pre></div>
+              <div style="margin-top:6px;"><b>Stack:</b><pre>Error: apiRequestContext.post: unable to verify the first certificate
+Call log:
+[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php[22m
+[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36[22m
+[2m    - accept: */*[22m
+[2m    - accept-encoding: gzip,deflate,br[22m
+[2m    - content-type: application/json[22m
+[2m    - content-length: 40[22m
+
+    at C:\Users\effen\Desktop\HTW Lucas Studium\Projektseminar\Playwright_Git\testsPlaywright\tests\loginapi.spec.js:5:34</pre></div>
+              <div class="small"><b>Error location:</b> C:\Users\effen\Desktop\HTW Lucas Studium\Projektseminar\Playwright_Git\testsPlaywright\tests\loginapi.spec.js:5:34</div>
+              <div style="margin-top:6px;"><b>Snippet:</b><pre>[0m [90m 3 |[39m test([32m&#39;Server-Login funktioniert&#39;[39m[33m,[39m [36masync[39m ({ request }) [33m=&gt;[39m {
+ [90m 4 |[39m   [90m// Anfrage an die Login-API[39m
+[31m[1m&gt;[22m[39m[90m 5 |[39m   [36mconst[39m response [33m=[39m [36mawait[39m request[33m.[39mpost([32m&#39;https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php&#39;[39m[33m,[39m {
+ [90m   |[39m                                  [31m[1m^[22m[39m
+ [90m 6 |[39m     data[33m:[39m {
+ [90m 7 |[39m       username[33m:[39m [32m&#39;testuser&#39;[39m[33m,[39m
+ [90m 8 |[39m       password[33m:[39m [32m&#39;123&#39;[39m[0m</pre></div>
+
+              <div style="margin-top:6px;"><b>Additional errors:</b><pre>[
+  {
+    &quot;message&quot;: &quot;Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n&quot;,
+    &quot;stack&quot;: &quot;Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n\n    at C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js:5:34&quot;,
+    &quot;location&quot;: {
+      &quot;file&quot;: &quot;C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js&quot;,
+      &quot;column&quot;: 34,
+      &quot;line&quot;: 5
+    },
+    &quot;snippet&quot;: &quot;\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m&#39;Server-Login funktioniert&#39;\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=&gt;\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[90m// Anfrage an die Login-API\u001b[39m\n\u001b[31m\u001b[1m&gt;\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m&#39;https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php&#39;\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m   |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     data\u001b[33m:\u001b[39m {\n \u001b[90m 7 |\u001b[39m       username\u001b[33m:\u001b[39m \u001b[32m&#39;testuser&#39;\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 8 |\u001b[39m       password\u001b[33m:\u001b[39m \u001b[32m&#39;123&#39;\u001b[39m\u001b[0m&quot;
+  }
+]</pre></div>
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3199</td>
-        <td>8.12.2025, 14:25:40</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3212</td>
-        <td>8.12.2025, 14:25:40</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3181</td>
-        <td>8.12.2025, 14:25:40</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3173</td>
-        <td>8.12.2025, 14:25:40</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3172</td>
-        <td>8.12.2025, 14:25:41</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3174</td>
-        <td>8.12.2025, 14:25:41</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>1307</td>
-        <td>8.12.2025, 14:25:44</td>
+        <td> › url-local › login-error.spec.js › Login über UI schlägt fehl (mit Mock)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1336</td>
+        <td>4.1.2026, 17:36:55</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1336ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:55</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>1319</td>
-        <td>8.12.2025, 14:25:43</td>
+        <td> › url-local › login.spec.js › Login über UI funktioniert (mit Mock)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1312</td>
+        <td>4.1.2026, 17:36:55</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1312ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:55</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>2926</td>
-        <td>8.12.2025, 14:25:44</td>
+        <td> › url-local › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Die Webseite hat ein sichtbares Suchfeld</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1330</td>
+        <td>4.1.2026, 17:36:56</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1330ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:56</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              <div style="margin-top:6px;"><b>stdout:</b><pre>🔍 Suchfeld gefunden über: input[type=&quot;search&quot;]
+</pre></div>
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>1441</td>
-        <td>8.12.2025, 14:25:45</td>
+        <td> › url-local › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Man kann einen Suchbegriff eingeben</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1368</td>
+        <td>4.1.2026, 17:36:57</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1368ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:57</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>2517</td>
-        <td>8.12.2025, 14:25:45</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should display cart button with initial count</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1440</td>
+        <td>4.1.2026, 17:36:57</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1440ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:57</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should add multiple quantities of item to cart</td>
+        <td>undefined:undefined:undefined</td>
         <td>2516</td>
-        <td>8.12.2025, 14:25:45</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2519</td>
-        <td>8.12.2025, 14:25:45</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>3868</td>
-        <td>8.12.2025, 14:25:45</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>3822</td>
-        <td>8.12.2025, 14:25:45</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>4487</td>
-        <td>8.12.2025, 14:25:46</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2376</td>
-        <td>8.12.2025, 14:25:46</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1660</td>
-        <td>8.12.2025, 14:25:47</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>3793</td>
-        <td>8.12.2025, 14:25:48</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2391</td>
-        <td>8.12.2025, 14:25:48</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1927</td>
-        <td>8.12.2025, 14:25:48</td>
-      </tr>
-    
-    </table>
-  </details>
-  <br/>
-  
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/ (22 Tests)</summary>
-    <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
-  
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3196</td>
-        <td>8.12.2025, 14:25:49</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3188</td>
-        <td>8.12.2025, 14:25:50</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3195</td>
-        <td>8.12.2025, 14:25:50</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3159</td>
-        <td>8.12.2025, 14:25:50</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3201</td>
-        <td>8.12.2025, 14:25:51</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3191</td>
-        <td>8.12.2025, 14:25:51</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3185</td>
-        <td>8.12.2025, 14:25:51</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1334</td>
-        <td>8.12.2025, 14:25:54</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1383</td>
-        <td>8.12.2025, 14:25:54</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2762</td>
-        <td>8.12.2025, 14:25:54</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1338</td>
-        <td>8.12.2025, 14:25:55</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2518</td>
-        <td>8.12.2025, 14:25:55</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2549</td>
-        <td>8.12.2025, 14:25:56</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2552</td>
-        <td>8.12.2025, 14:25:56</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3847</td>
-        <td>8.12.2025, 14:25:55</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3886</td>
-        <td>8.12.2025, 14:25:56</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>4400</td>
-        <td>8.12.2025, 14:25:56</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2467</td>
-        <td>8.12.2025, 14:25:57</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1602</td>
-        <td>8.12.2025, 14:25:57</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3822</td>
-        <td>8.12.2025, 14:25:58</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2388</td>
-        <td>8.12.2025, 14:25:58</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1946</td>
-        <td>8.12.2025, 14:25:58</td>
-      </tr>
-    
-    </table>
-  </details>
-  <br/>
-  
-  <details>
-    <summary>Getestete Webseite: http://localhost:5173/ (22 Tests)</summary>
-    <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
-  
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3215</td>
-        <td>8.12.2025, 14:25:59</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3193</td>
-        <td>8.12.2025, 14:26:00</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3201</td>
-        <td>8.12.2025, 14:26:00</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3208</td>
-        <td>8.12.2025, 14:26:01</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3203</td>
-        <td>8.12.2025, 14:26:01</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3189</td>
-        <td>8.12.2025, 14:26:01</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3193</td>
-        <td>8.12.2025, 14:26:02</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1326</td>
-        <td>8.12.2025, 14:26:04</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1401</td>
-        <td>8.12.2025, 14:26:05</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2778</td>
-        <td>8.12.2025, 14:26:04</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1377</td>
-        <td>8.12.2025, 14:26:06</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2552</td>
-        <td>8.12.2025, 14:26:06</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2561</td>
-        <td>8.12.2025, 14:26:06</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2505</td>
-        <td>8.12.2025, 14:26:06</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3783</td>
-        <td>8.12.2025, 14:26:05</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3834</td>
-        <td>8.12.2025, 14:26:06</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>4333</td>
-        <td>8.12.2025, 14:26:07</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2438</td>
-        <td>8.12.2025, 14:26:07</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1680</td>
-        <td>8.12.2025, 14:26:07</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3841</td>
-        <td>8.12.2025, 14:26:08</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2452</td>
-        <td>8.12.2025, 14:26:08</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1955</td>
-        <td>8.12.2025, 14:26:09</td>
-      </tr>
-    
-    </table>
-  </details>
-  <br/>
-  
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/ (22 Tests)</summary>
-    <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
-  
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3222</td>
-        <td>8.12.2025, 14:26:10</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3209</td>
-        <td>8.12.2025, 14:26:10</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3189</td>
-        <td>8.12.2025, 14:26:10</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3183</td>
-        <td>8.12.2025, 14:26:11</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3201</td>
-        <td>8.12.2025, 14:26:12</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3218</td>
-        <td>8.12.2025, 14:26:12</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3199</td>
-        <td>8.12.2025, 14:26:12</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1345</td>
-        <td>8.12.2025, 14:26:15</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1404</td>
-        <td>8.12.2025, 14:26:15</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2918</td>
-        <td>8.12.2025, 14:26:15</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1341</td>
-        <td>8.12.2025, 14:26:14</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2518</td>
-        <td>8.12.2025, 14:26:16</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2482</td>
-        <td>8.12.2025, 14:26:16</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2508</td>
-        <td>8.12.2025, 14:26:16</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>3862</td>
-        <td>8.12.2025, 14:26:15</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>3764</td>
-        <td>8.12.2025, 14:26:16</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>4294</td>
-        <td>8.12.2025, 14:26:16</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2426</td>
-        <td>8.12.2025, 14:26:17</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1689</td>
-        <td>8.12.2025, 14:26:18</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>3770</td>
-        <td>8.12.2025, 14:26:19</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2421</td>
-        <td>8.12.2025, 14:26:19</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1941</td>
-        <td>8.12.2025, 14:26:19</td>
-      </tr>
-    
-    </table>
-  </details>
-  <br/>
-  
-</div>
-</body>
-</html>
+        <td>4.1.2026, 17:36:57</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
 
-<hr/>
-<div class="run-section">
-<h2>Testlauf vom 8.12.2025, 15:39:28</h2>
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
 
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/ (22 Tests)</summary>
-    <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
-  
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3245</td>
-        <td>8.12.2025, 15:38:33</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3231</td>
-        <td>8.12.2025, 15:38:33</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3232</td>
-        <td>8.12.2025, 15:38:34</td>
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2516ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:57</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3232</td>
-        <td>8.12.2025, 15:38:34</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3191</td>
-        <td>8.12.2025, 15:38:34</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3212</td>
-        <td>8.12.2025, 15:38:35</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3208</td>
-        <td>8.12.2025, 15:38:35</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>1392</td>
-        <td>8.12.2025, 15:38:38</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1295</td>
-        <td>8.12.2025, 15:38:37</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2905</td>
-        <td>8.12.2025, 15:38:39</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1404</td>
-        <td>8.12.2025, 15:38:39</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2571</td>
-        <td>8.12.2025, 15:38:39</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2513</td>
-        <td>8.12.2025, 15:38:40</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2569</td>
-        <td>8.12.2025, 15:38:40</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>3923</td>
-        <td>8.12.2025, 15:38:39</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>3923</td>
-        <td>8.12.2025, 15:38:39</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>4433</td>
-        <td>8.12.2025, 15:38:40</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2455</td>
-        <td>8.12.2025, 15:38:40</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1743</td>
-        <td>8.12.2025, 15:38:42</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>3941</td>
-        <td>8.12.2025, 15:38:42</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2447</td>
-        <td>8.12.2025, 15:38:42</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2013</td>
-        <td>8.12.2025, 15:38:42</td>
-      </tr>
-    
-    </table>
-  </details>
-  <br/>
-  
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/ (22 Tests)</summary>
-    <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
-  
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3222</td>
-        <td>8.12.2025, 15:38:44</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3195</td>
-        <td>8.12.2025, 15:38:44</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3215</td>
-        <td>8.12.2025, 15:38:45</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3196</td>
-        <td>8.12.2025, 15:38:45</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3175</td>
-        <td>8.12.2025, 15:38:46</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3185</td>
-        <td>8.12.2025, 15:38:46</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3201</td>
-        <td>8.12.2025, 15:38:46</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1360</td>
-        <td>8.12.2025, 15:38:49</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1471</td>
-        <td>8.12.2025, 15:38:50</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2797</td>
-        <td>8.12.2025, 15:38:48</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1450</td>
-        <td>8.12.2025, 15:38:50</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2568</td>
-        <td>8.12.2025, 15:38:50</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2593</td>
-        <td>8.12.2025, 15:38:51</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2572</td>
-        <td>8.12.2025, 15:38:51</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3867</td>
-        <td>8.12.2025, 15:38:50</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3908</td>
-        <td>8.12.2025, 15:38:51</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>4438</td>
-        <td>8.12.2025, 15:38:51</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2480</td>
-        <td>8.12.2025, 15:38:51</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1718</td>
-        <td>8.12.2025, 15:38:52</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3874</td>
-        <td>8.12.2025, 15:38:53</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2436</td>
-        <td>8.12.2025, 15:38:53</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1952</td>
-        <td>8.12.2025, 15:38:53</td>
-      </tr>
-    
-    </table>
-  </details>
-  <br/>
-  
-  <details>
-    <summary>Getestete Webseite: http://localhost:5173/ (22 Tests)</summary>
-    <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
-  
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3200</td>
-        <td>8.12.2025, 15:38:55</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3207</td>
-        <td>8.12.2025, 15:38:55</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3194</td>
-        <td>8.12.2025, 15:38:55</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3189</td>
-        <td>8.12.2025, 15:38:56</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3202</td>
-        <td>8.12.2025, 15:38:57</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3207</td>
-        <td>8.12.2025, 15:38:57</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3199</td>
-        <td>8.12.2025, 15:38:57</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1413</td>
-        <td>8.12.2025, 15:39:00</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1394</td>
-        <td>8.12.2025, 15:39:00</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2814</td>
-        <td>8.12.2025, 15:38:59</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1409</td>
-        <td>8.12.2025, 15:39:01</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2623</td>
-        <td>8.12.2025, 15:39:01</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2562</td>
-        <td>8.12.2025, 15:39:01</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2690</td>
-        <td>8.12.2025, 15:39:01</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3935</td>
-        <td>8.12.2025, 15:39:01</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3936</td>
-        <td>8.12.2025, 15:39:01</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>4308</td>
-        <td>8.12.2025, 15:39:02</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2482</td>
-        <td>8.12.2025, 15:39:02</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1733</td>
-        <td>8.12.2025, 15:39:02</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3867</td>
-        <td>8.12.2025, 15:39:04</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2476</td>
-        <td>8.12.2025, 15:39:04</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1989</td>
-        <td>8.12.2025, 15:39:04</td>
-      </tr>
-    
-    </table>
-  </details>
-  <br/>
-  
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/ (22 Tests)</summary>
-    <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
-  
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3199</td>
-        <td>8.12.2025, 15:39:05</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3191</td>
-        <td>8.12.2025, 15:39:06</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3194</td>
-        <td>8.12.2025, 15:39:06</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3192</td>
-        <td>8.12.2025, 15:39:06</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3197</td>
-        <td>8.12.2025, 15:39:07</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3197</td>
-        <td>8.12.2025, 15:39:08</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3202</td>
-        <td>8.12.2025, 15:39:08</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1383</td>
-        <td>8.12.2025, 15:39:11</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1381</td>
-        <td>8.12.2025, 15:39:11</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2814</td>
-        <td>8.12.2025, 15:39:10</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1365</td>
-        <td>8.12.2025, 15:39:12</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should open cart popup and display items</td>
+        <td>undefined:undefined:undefined</td>
         <td>2560</td>
-        <td>8.12.2025, 15:39:12</td>
+        <td>4.1.2026, 17:36:57</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2560ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:57</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>2617</td>
-        <td>8.12.2025, 15:39:12</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should add item to cart from product listing</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2633</td>
+        <td>4.1.2026, 17:36:57</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2633ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:57</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>2564</td>
-        <td>8.12.2025, 15:39:12</td>
+        <td> › url-local › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2933</td>
+        <td>4.1.2026, 17:36:57</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2933ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:57</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>3910</td>
-        <td>8.12.2025, 15:39:11</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should close cart popup when X button is clicked</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1649</td>
+        <td>4.1.2026, 17:36:59</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1649ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:59</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>3929</td>
-        <td>8.12.2025, 15:39:12</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should display correct total price calculation</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2444</td>
+        <td>4.1.2026, 17:36:59</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2444ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:59</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>4303</td>
-        <td>8.12.2025, 15:39:13</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should decrease item quantity in cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3931</td>
+        <td>4.1.2026, 17:36:58</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3931ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:58</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>2536</td>
-        <td>8.12.2025, 15:39:13</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should show empty cart message when cart is empty</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1909</td>
+        <td>4.1.2026, 17:37:00</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1909ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:00</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>1669</td>
-        <td>8.12.2025, 15:39:13</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should prevent adding more than available stock</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2374</td>
+        <td>4.1.2026, 17:37:00</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2374ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:00</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>3875</td>
-        <td>8.12.2025, 15:39:15</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should increase item quantity in cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3908</td>
+        <td>4.1.2026, 17:36:58</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3908ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:58</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>2392</td>
-        <td>8.12.2025, 15:39:15</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should remove item when quantity reaches 0</td>
+        <td>undefined:undefined:undefined</td>
+        <td>4429</td>
+        <td>4.1.2026, 17:36:58</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 4429ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:58</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>1968</td>
-        <td>8.12.2025, 15:39:15</td>
+        <td> › url-local › warenkorb.spec.js › Shopping Cart Functionality › should navigate to checkout from cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3827</td>
+        <td>4.1.2026, 17:36:59</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3827ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:59</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
+      </tbody>
     </table>
   </details>
-  <br/>
   
-</div>
-</body>
-</html>
+  <details class="site">
+    <summary>
+      <span class="url">https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/</span>
+      <span class="pill">url-g05</span>
+      <span class="pill passed">P: 17</span>
+      <span class="pill failed">F: 1</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 18</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/" target="_blank" rel="noreferrer">https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/</a></div>
 
-<hr/>
-<div class="run-section">
-<h2>Testlauf vom 13.12.2025, 15:23:16</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+      <tr>
+        <td class="failed">failed</td>
+        <td> › url-g05 › loginapi.spec.js › Server-Login funktioniert</td>
+        <td>undefined:undefined:undefined</td>
+        <td>110</td>
+        <td>4.1.2026, 17:36:43</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
 
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/#/ (22 Tests)</summary>
-    <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
-  
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3181</td>
-        <td>13.12.2025, 15:18:03</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3214</td>
-        <td>13.12.2025, 15:18:03</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3191</td>
-        <td>13.12.2025, 15:18:03</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3207</td>
-        <td>13.12.2025, 15:18:03</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3169</td>
-        <td>13.12.2025, 15:18:04</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3179</td>
-        <td>13.12.2025, 15:18:04</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g05</td>
-        <td class="failed">failed</td>
-        <td>3179</td>
-        <td>13.12.2025, 15:18:04</td>
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="failed">failed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 110ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:43</span>
+              </div>
+
+              <div style="margin-top:6px;"><b>Error message:</b><pre>Error: apiRequestContext.post: unable to verify the first certificate
+Call log:
+[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php[22m
+[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36[22m
+[2m    - accept: */*[22m
+[2m    - accept-encoding: gzip,deflate,br[22m
+[2m    - content-type: application/json[22m
+[2m    - content-length: 40[22m
+</pre></div>
+              <div style="margin-top:6px;"><b>Stack:</b><pre>Error: apiRequestContext.post: unable to verify the first certificate
+Call log:
+[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php[22m
+[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36[22m
+[2m    - accept: */*[22m
+[2m    - accept-encoding: gzip,deflate,br[22m
+[2m    - content-type: application/json[22m
+[2m    - content-length: 40[22m
+
+    at C:\Users\effen\Desktop\HTW Lucas Studium\Projektseminar\Playwright_Git\testsPlaywright\tests\loginapi.spec.js:5:34</pre></div>
+              <div class="small"><b>Error location:</b> C:\Users\effen\Desktop\HTW Lucas Studium\Projektseminar\Playwright_Git\testsPlaywright\tests\loginapi.spec.js:5:34</div>
+              <div style="margin-top:6px;"><b>Snippet:</b><pre>[0m [90m 3 |[39m test([32m&#39;Server-Login funktioniert&#39;[39m[33m,[39m [36masync[39m ({ request }) [33m=&gt;[39m {
+ [90m 4 |[39m   [90m// Anfrage an die Login-API[39m
+[31m[1m&gt;[22m[39m[90m 5 |[39m   [36mconst[39m response [33m=[39m [36mawait[39m request[33m.[39mpost([32m&#39;https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php&#39;[39m[33m,[39m {
+ [90m   |[39m                                  [31m[1m^[22m[39m
+ [90m 6 |[39m     data[33m:[39m {
+ [90m 7 |[39m       username[33m:[39m [32m&#39;testuser&#39;[39m[33m,[39m
+ [90m 8 |[39m       password[33m:[39m [32m&#39;123&#39;[39m[0m</pre></div>
+
+              <div style="margin-top:6px;"><b>Additional errors:</b><pre>[
+  {
+    &quot;message&quot;: &quot;Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n&quot;,
+    &quot;stack&quot;: &quot;Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n\n    at C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js:5:34&quot;,
+    &quot;location&quot;: {
+      &quot;file&quot;: &quot;C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js&quot;,
+      &quot;column&quot;: 34,
+      &quot;line&quot;: 5
+    },
+    &quot;snippet&quot;: &quot;\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m&#39;Server-Login funktioniert&#39;\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=&gt;\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[90m// Anfrage an die Login-API\u001b[39m\n\u001b[31m\u001b[1m&gt;\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m&#39;https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php&#39;\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m   |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     data\u001b[33m:\u001b[39m {\n \u001b[90m 7 |\u001b[39m       username\u001b[33m:\u001b[39m \u001b[32m&#39;testuser&#39;\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 8 |\u001b[39m       password\u001b[33m:\u001b[39m \u001b[32m&#39;123&#39;\u001b[39m\u001b[0m&quot;
+  }
+]</pre></div>
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>1377</td>
-        <td>13.12.2025, 15:18:07</td>
+        <td> › url-g05 › login.spec.js › Login über UI funktioniert (mit Mock)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1273</td>
+        <td>4.1.2026, 17:36:41</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1273ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:41</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>1270</td>
-        <td>13.12.2025, 15:18:07</td>
+        <td> › url-g05 › login-error.spec.js › Login über UI schlägt fehl (mit Mock)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1399</td>
+        <td>4.1.2026, 17:36:41</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1399ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:41</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>2890</td>
-        <td>13.12.2025, 15:18:08</td>
+        <td> › url-g05 › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Die Webseite hat ein sichtbares Suchfeld</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1359</td>
+        <td>4.1.2026, 17:36:43</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1359ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:43</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              <div style="margin-top:6px;"><b>stdout:</b><pre>🔍 Suchfeld gefunden über: input[type=&quot;search&quot;]
+</pre></div>
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>1380</td>
-        <td>13.12.2025, 15:18:08</td>
+        <td> › url-g05 › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Man kann einen Suchbegriff eingeben</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1413</td>
+        <td>4.1.2026, 17:36:43</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1413ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:43</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>2599</td>
-        <td>13.12.2025, 15:18:08</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should display cart button with initial count</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1322</td>
+        <td>4.1.2026, 17:36:44</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1322ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:44</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>2517</td>
-        <td>13.12.2025, 15:18:08</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should add multiple quantities of item to cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2491</td>
+        <td>4.1.2026, 17:36:43</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2491ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:43</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>2486</td>
-        <td>13.12.2025, 15:18:09</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should open cart popup and display items</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2499</td>
+        <td>4.1.2026, 17:36:43</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2499ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:43</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>3815</td>
-        <td>13.12.2025, 15:18:08</td>
+        <td> › url-g05 › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2895</td>
+        <td>4.1.2026, 17:36:43</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2895ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:43</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>3867</td>
-        <td>13.12.2025, 15:18:08</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should add item to cart from product listing</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2557</td>
+        <td>4.1.2026, 17:36:44</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2557ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:44</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g05</td>
         <td class="passed">passed</td>
-        <td>4313</td>
-        <td>13.12.2025, 15:18:09</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2397</td>
-        <td>13.12.2025, 15:18:09</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1723</td>
-        <td>13.12.2025, 15:18:11</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>3842</td>
-        <td>13.12.2025, 15:18:11</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>2411</td>
-        <td>13.12.2025, 15:18:11</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g05</td>
-        <td class="passed">passed</td>
-        <td>1967</td>
-        <td>13.12.2025, 15:18:11</td>
-      </tr>
-    
-    </table>
-  </details>
-  <br/>
-  
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/ (22 Tests)</summary>
-    <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
-  
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3187</td>
-        <td>13.12.2025, 15:18:13</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3171</td>
-        <td>13.12.2025, 15:18:13</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3191</td>
-        <td>13.12.2025, 15:18:13</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3182</td>
-        <td>13.12.2025, 15:18:14</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3186</td>
-        <td>13.12.2025, 15:18:14</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3183</td>
-        <td>13.12.2025, 15:18:14</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g09</td>
-        <td class="failed">failed</td>
-        <td>3180</td>
-        <td>13.12.2025, 15:18:15</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1431</td>
-        <td>13.12.2025, 15:18:18</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1397</td>
-        <td>13.12.2025, 15:18:18</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2841</td>
-        <td>13.12.2025, 15:18:17</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>1350</td>
-        <td>13.12.2025, 15:18:19</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2576</td>
-        <td>13.12.2025, 15:18:19</td>
-      </tr>
-    
-      <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2551</td>
-        <td>13.12.2025, 15:18:19</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2551</td>
-        <td>13.12.2025, 15:18:19</td>
-      </tr>
-    
-      <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3932</td>
-        <td>13.12.2025, 15:18:19</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>3928</td>
-        <td>13.12.2025, 15:18:19</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>4342</td>
-        <td>13.12.2025, 15:18:20</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
-        <td>2436</td>
-        <td>13.12.2025, 15:18:20</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g09</td>
-        <td class="passed">passed</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should close cart popup when X button is clicked</td>
+        <td>undefined:undefined:undefined</td>
         <td>1746</td>
-        <td>13.12.2025, 15:18:20</td>
+        <td>4.1.2026, 17:36:45</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1746ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:45</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g09</td>
         <td class="passed">passed</td>
-        <td>3997</td>
-        <td>13.12.2025, 15:18:22</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should display correct total price calculation</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2411</td>
+        <td>4.1.2026, 17:36:45</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2411ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:45</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g09</td>
         <td class="passed">passed</td>
-        <td>2468</td>
-        <td>13.12.2025, 15:18:22</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should decrease item quantity in cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3872</td>
+        <td>4.1.2026, 17:36:44</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3872ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:44</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g09</td>
         <td class="passed">passed</td>
-        <td>2000</td>
-        <td>13.12.2025, 15:18:22</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should increase item quantity in cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3877</td>
+        <td>4.1.2026, 17:36:44</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3877ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:44</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should show empty cart message when cart is empty</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2039</td>
+        <td>4.1.2026, 17:36:47</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2039ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:47</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should prevent adding more than available stock</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2405</td>
+        <td>4.1.2026, 17:36:46</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2405ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:46</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should remove item when quantity reaches 0</td>
+        <td>undefined:undefined:undefined</td>
+        <td>4370</td>
+        <td>4.1.2026, 17:36:45</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 4370ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:45</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g05 › warenkorb.spec.js › Shopping Cart Functionality › should navigate to checkout from cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3881</td>
+        <td>4.1.2026, 17:36:45</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3881ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:45</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      </tbody>
     </table>
   </details>
-  <br/>
   
-  <details>
-    <summary>Getestete Webseite: http://localhost:5173/ (22 Tests)</summary>
+  <details class="site">
+    <summary>
+      <span class="url">https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/</span>
+      <span class="pill">url-g09</span>
+      <span class="pill passed">P: 17</span>
+      <span class="pill failed">F: 1</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 18</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/" target="_blank" rel="noreferrer">https://ivm108.informatik.htw-dresden.de/ewa24tests/g09/beleg/frontend/</a></div>
+
     <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
   
       <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-local</td>
         <td class="failed">failed</td>
-        <td>3190</td>
-        <td>13.12.2025, 15:18:23</td>
+        <td> › url-g09 › loginapi.spec.js › Server-Login funktioniert</td>
+        <td>undefined:undefined:undefined</td>
+        <td>116</td>
+        <td>4.1.2026, 17:36:49</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="failed">failed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 116ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:49</span>
+              </div>
+
+              <div style="margin-top:6px;"><b>Error message:</b><pre>Error: apiRequestContext.post: unable to verify the first certificate
+Call log:
+[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php[22m
+[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36[22m
+[2m    - accept: */*[22m
+[2m    - accept-encoding: gzip,deflate,br[22m
+[2m    - content-type: application/json[22m
+[2m    - content-length: 40[22m
+</pre></div>
+              <div style="margin-top:6px;"><b>Stack:</b><pre>Error: apiRequestContext.post: unable to verify the first certificate
+Call log:
+[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php[22m
+[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36[22m
+[2m    - accept: */*[22m
+[2m    - accept-encoding: gzip,deflate,br[22m
+[2m    - content-type: application/json[22m
+[2m    - content-length: 40[22m
+
+    at C:\Users\effen\Desktop\HTW Lucas Studium\Projektseminar\Playwright_Git\testsPlaywright\tests\loginapi.spec.js:5:34</pre></div>
+              <div class="small"><b>Error location:</b> C:\Users\effen\Desktop\HTW Lucas Studium\Projektseminar\Playwright_Git\testsPlaywright\tests\loginapi.spec.js:5:34</div>
+              <div style="margin-top:6px;"><b>Snippet:</b><pre>[0m [90m 3 |[39m test([32m&#39;Server-Login funktioniert&#39;[39m[33m,[39m [36masync[39m ({ request }) [33m=&gt;[39m {
+ [90m 4 |[39m   [90m// Anfrage an die Login-API[39m
+[31m[1m&gt;[22m[39m[90m 5 |[39m   [36mconst[39m response [33m=[39m [36mawait[39m request[33m.[39mpost([32m&#39;https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php&#39;[39m[33m,[39m {
+ [90m   |[39m                                  [31m[1m^[22m[39m
+ [90m 6 |[39m     data[33m:[39m {
+ [90m 7 |[39m       username[33m:[39m [32m&#39;testuser&#39;[39m[33m,[39m
+ [90m 8 |[39m       password[33m:[39m [32m&#39;123&#39;[39m[0m</pre></div>
+
+              <div style="margin-top:6px;"><b>Additional errors:</b><pre>[
+  {
+    &quot;message&quot;: &quot;Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n&quot;,
+    &quot;stack&quot;: &quot;Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n\n    at C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js:5:34&quot;,
+    &quot;location&quot;: {
+      &quot;file&quot;: &quot;C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js&quot;,
+      &quot;column&quot;: 34,
+      &quot;line&quot;: 5
+    },
+    &quot;snippet&quot;: &quot;\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m&#39;Server-Login funktioniert&#39;\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=&gt;\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[90m// Anfrage an die Login-API\u001b[39m\n\u001b[31m\u001b[1m&gt;\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m&#39;https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php&#39;\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m   |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     data\u001b[33m:\u001b[39m {\n \u001b[90m 7 |\u001b[39m       username\u001b[33m:\u001b[39m \u001b[32m&#39;testuser&#39;\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 8 |\u001b[39m       password\u001b[33m:\u001b[39m \u001b[32m&#39;123&#39;\u001b[39m\u001b[0m&quot;
+  }
+]</pre></div>
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3202</td>
-        <td>13.12.2025, 15:18:23</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3205</td>
-        <td>13.12.2025, 15:18:24</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3194</td>
-        <td>13.12.2025, 15:18:24</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3178</td>
-        <td>13.12.2025, 15:18:25</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3189</td>
-        <td>13.12.2025, 15:18:25</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-local</td>
-        <td class="failed">failed</td>
-        <td>3186</td>
-        <td>13.12.2025, 15:18:25</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-local</td>
         <td class="passed">passed</td>
-        <td>1412</td>
-        <td>13.12.2025, 15:18:28</td>
+        <td> › url-g09 › login-error.spec.js › Login über UI schlägt fehl (mit Mock)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1275</td>
+        <td>4.1.2026, 17:36:48</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1275ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:48</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-local</td>
         <td class="passed">passed</td>
-        <td>1363</td>
-        <td>13.12.2025, 15:18:28</td>
+        <td> › url-g09 › login.spec.js › Login über UI funktioniert (mit Mock)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1343</td>
+        <td>4.1.2026, 17:36:49</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1343ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:49</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-local</td>
         <td class="passed">passed</td>
-        <td>2817</td>
-        <td>13.12.2025, 15:18:28</td>
+        <td> › url-g09 › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Die Webseite hat ein sichtbares Suchfeld</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1400</td>
+        <td>4.1.2026, 17:36:50</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1400ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:50</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              <div style="margin-top:6px;"><b>stdout:</b><pre>🔍 Suchfeld gefunden über: input[type=&quot;search&quot;]
+</pre></div>
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-local</td>
         <td class="passed">passed</td>
-        <td>1393</td>
-        <td>13.12.2025, 15:18:29</td>
+        <td> › url-g09 › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Man kann einen Suchbegriff eingeben</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1419</td>
+        <td>4.1.2026, 17:36:50</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1419ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:50</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-local</td>
         <td class="passed">passed</td>
-        <td>2533</td>
-        <td>13.12.2025, 15:18:29</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should display cart button with initial count</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1371</td>
+        <td>4.1.2026, 17:36:51</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1371ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:51</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-local</td>
         <td class="passed">passed</td>
-        <td>2608</td>
-        <td>13.12.2025, 15:18:30</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should open cart popup and display items</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2539</td>
+        <td>4.1.2026, 17:36:50</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2539ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:50</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-local</td>
         <td class="passed">passed</td>
-        <td>2591</td>
-        <td>13.12.2025, 15:18:30</td>
+        <td> › url-g09 › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2951</td>
+        <td>4.1.2026, 17:36:50</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2951ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:50</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-local</td>
         <td class="passed">passed</td>
-        <td>3894</td>
-        <td>13.12.2025, 15:18:29</td>
-      </tr>
-    
-      <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3912</td>
-        <td>13.12.2025, 15:18:29</td>
-      </tr>
-    
-      <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>4334</td>
-        <td>13.12.2025, 15:18:30</td>
-      </tr>
-    
-      <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2344</td>
-        <td>13.12.2025, 15:18:31</td>
-      </tr>
-    
-      <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1675</td>
-        <td>13.12.2025, 15:18:31</td>
-      </tr>
-    
-      <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>3834</td>
-        <td>13.12.2025, 15:18:32</td>
-      </tr>
-    
-      <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>2399</td>
-        <td>13.12.2025, 15:18:32</td>
-      </tr>
-    
-      <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-local</td>
-        <td class="passed">passed</td>
-        <td>1973</td>
-        <td>13.12.2025, 15:18:32</td>
-      </tr>
-    
-    </table>
-  </details>
-  <br/>
-  
-  <details>
-    <summary>Getestete Webseite: https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/ (22 Tests)</summary>
-    <table>
-      <tr>
-        <th>Testname</th>
-        <th>Projekt</th>
-        <th>Status</th>
-        <th>Dauer (ms)</th>
-        <th>Zeitpunkt</th>
-      </tr>
-  
-      <tr>
-        <td>sollte Fehlermeldungen für leere Pflichtfelder anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3200</td>
-        <td>13.12.2025, 15:18:33</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültige PLZ anzeigen (muss 5 Ziffern sein)</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3222</td>
-        <td>13.12.2025, 15:18:33</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter unter dem Minimum (3) liegt</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3153</td>
-        <td>13.12.2025, 15:18:34</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung anzeigen, wenn Alter über dem Maximum (120) liegt</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3176</td>
-        <td>13.12.2025, 15:18:34</td>
-      </tr>
-    
-      <tr>
-        <td>sollte Fehlermeldung für ungültiges URL-Format anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3197</td>
-        <td>13.12.2025, 15:18:35</td>
-      </tr>
-    
-      <tr>
-        <td>sollte gültige Eingaben akzeptieren und keine Fehler anzeigen</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3200</td>
-        <td>13.12.2025, 15:18:35</td>
-      </tr>
-    
-      <tr>
-        <td>sollte alle Felder leeren, wenn "Zurücksetzen" geklickt wird</td>
-        <td>url-g12</td>
-        <td class="failed">failed</td>
-        <td>3187</td>
-        <td>13.12.2025, 15:18:36</td>
-      </tr>
-    
-      <tr>
-        <td>Die Webseite hat ein sichtbares Suchfeld</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1350</td>
-        <td>13.12.2025, 15:18:38</td>
-      </tr>
-    
-      <tr>
-        <td>Man kann einen Suchbegriff eingeben</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1415</td>
-        <td>13.12.2025, 15:18:39</td>
-      </tr>
-    
-      <tr>
-        <td>Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>2897</td>
-        <td>13.12.2025, 15:18:39</td>
-      </tr>
-    
-      <tr>
-        <td>should display cart button with initial count</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
-        <td>1297</td>
-        <td>13.12.2025, 15:18:38</td>
-      </tr>
-    
-      <tr>
-        <td>should add item to cart from product listing</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should add item to cart from product listing</td>
+        <td>undefined:undefined:undefined</td>
         <td>2627</td>
-        <td>13.12.2025, 15:18:40</td>
+        <td>4.1.2026, 17:36:51</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2627ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:51</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should add multiple quantities of item to cart</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>2513</td>
-        <td>13.12.2025, 15:18:40</td>
-      </tr>
-    
-      <tr>
-        <td>should open cart popup and display items</td>
-        <td>url-g12</td>
-        <td class="passed">passed</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should add multiple quantities of item to cart</td>
+        <td>undefined:undefined:undefined</td>
         <td>2536</td>
-        <td>13.12.2025, 15:18:40</td>
+        <td>4.1.2026, 17:36:51</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2536ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:51</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should increase item quantity in cart</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>3896</td>
-        <td>13.12.2025, 15:18:39</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should close cart popup when X button is clicked</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1670</td>
+        <td>4.1.2026, 17:36:52</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1670ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:52</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should decrease item quantity in cart</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>3869</td>
-        <td>13.12.2025, 15:18:39</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should increase item quantity in cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3939</td>
+        <td>4.1.2026, 17:36:50</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3939ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:50</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should remove item when quantity reaches 0</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>4332</td>
-        <td>13.12.2025, 15:18:40</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should display correct total price calculation</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2474</td>
+        <td>4.1.2026, 17:36:52</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2474ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:52</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should display correct total price calculation</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>2386</td>
-        <td>13.12.2025, 15:18:40</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should decrease item quantity in cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3936</td>
+        <td>4.1.2026, 17:36:51</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3936ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:51</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should close cart popup when X button is clicked</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>1682</td>
-        <td>13.12.2025, 15:18:42</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should show empty cart message when cart is empty</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1930</td>
+        <td>4.1.2026, 17:36:53</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1930ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:53</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should navigate to checkout from cart</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>3764</td>
-        <td>13.12.2025, 15:18:42</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should remove item when quantity reaches 0</td>
+        <td>undefined:undefined:undefined</td>
+        <td>4389</td>
+        <td>4.1.2026, 17:36:52</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 4389ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:52</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should prevent adding more than available stock</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>2407</td>
-        <td>13.12.2025, 15:18:42</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should prevent adding more than available stock</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2516</td>
+        <td>4.1.2026, 17:36:53</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2516ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:53</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
       <tr>
-        <td>should show empty cart message when cart is empty</td>
-        <td>url-g12</td>
         <td class="passed">passed</td>
-        <td>1876</td>
-        <td>13.12.2025, 15:18:43</td>
+        <td> › url-g09 › warenkorb.spec.js › Shopping Cart Functionality › should navigate to checkout from cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3820</td>
+        <td>4.1.2026, 17:36:53</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3820ms</span>
+                <span class="pill">start: 4.1.2026, 17:36:53</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
       </tr>
     
+      </tbody>
     </table>
   </details>
-  <br/>
+  
+  <details class="site">
+    <summary>
+      <span class="url">https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/</span>
+      <span class="pill">url-g12</span>
+      <span class="pill passed">P: 17</span>
+      <span class="pill failed">F: 1</span>
+      <span class="pill skipped">S: 0</span>
+      <span class="pill">T: 18</span>
+    </summary>
+    <div class="small">Link: <a class="url" href="https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/" target="_blank" rel="noreferrer">https://ivm108.informatik.htw-dresden.de/ewa24tests/g12/Beleg/</a></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Test</th>
+          <th>Datei</th>
+          <th>Letzte Dauer (ms)</th>
+          <th>Letzte Startzeit</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+      <tr>
+        <td class="failed">failed</td>
+        <td> › url-g12 › loginapi.spec.js › Server-Login funktioniert</td>
+        <td>undefined:undefined:undefined</td>
+        <td>105</td>
+        <td>4.1.2026, 17:37:03</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="failed">failed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 105ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:03</span>
+              </div>
+
+              <div style="margin-top:6px;"><b>Error message:</b><pre>Error: apiRequestContext.post: unable to verify the first certificate
+Call log:
+[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php[22m
+[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36[22m
+[2m    - accept: */*[22m
+[2m    - accept-encoding: gzip,deflate,br[22m
+[2m    - content-type: application/json[22m
+[2m    - content-length: 40[22m
+</pre></div>
+              <div style="margin-top:6px;"><b>Stack:</b><pre>Error: apiRequestContext.post: unable to verify the first certificate
+Call log:
+[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php[22m
+[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36[22m
+[2m    - accept: */*[22m
+[2m    - accept-encoding: gzip,deflate,br[22m
+[2m    - content-type: application/json[22m
+[2m    - content-length: 40[22m
+
+    at C:\Users\effen\Desktop\HTW Lucas Studium\Projektseminar\Playwright_Git\testsPlaywright\tests\loginapi.spec.js:5:34</pre></div>
+              <div class="small"><b>Error location:</b> C:\Users\effen\Desktop\HTW Lucas Studium\Projektseminar\Playwright_Git\testsPlaywright\tests\loginapi.spec.js:5:34</div>
+              <div style="margin-top:6px;"><b>Snippet:</b><pre>[0m [90m 3 |[39m test([32m&#39;Server-Login funktioniert&#39;[39m[33m,[39m [36masync[39m ({ request }) [33m=&gt;[39m {
+ [90m 4 |[39m   [90m// Anfrage an die Login-API[39m
+[31m[1m&gt;[22m[39m[90m 5 |[39m   [36mconst[39m response [33m=[39m [36mawait[39m request[33m.[39mpost([32m&#39;https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php&#39;[39m[33m,[39m {
+ [90m   |[39m                                  [31m[1m^[22m[39m
+ [90m 6 |[39m     data[33m:[39m {
+ [90m 7 |[39m       username[33m:[39m [32m&#39;testuser&#39;[39m[33m,[39m
+ [90m 8 |[39m       password[33m:[39m [32m&#39;123&#39;[39m[0m</pre></div>
+
+              <div style="margin-top:6px;"><b>Additional errors:</b><pre>[
+  {
+    &quot;message&quot;: &quot;Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n&quot;,
+    &quot;stack&quot;: &quot;Error: apiRequestContext.post: unable to verify the first certificate\nCall log:\n\u001b[2m  - → POST https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.7390.37 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 40\u001b[22m\n\n    at C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js:5:34&quot;,
+    &quot;location&quot;: {
+      &quot;file&quot;: &quot;C:\\Users\\effen\\Desktop\\HTW Lucas Studium\\Projektseminar\\Playwright_Git\\testsPlaywright\\tests\\loginapi.spec.js&quot;,
+      &quot;column&quot;: 34,
+      &quot;line&quot;: 5
+    },
+    &quot;snippet&quot;: &quot;\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m&#39;Server-Login funktioniert&#39;\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ request }) \u001b[33m=&gt;\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[90m// Anfrage an die Login-API\u001b[39m\n\u001b[31m\u001b[1m&gt;\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m&#39;https://ivm108.informatik.htw-dresden.de/ewa24tests/g05/EWA_Beleg_24/assets/db/base_db.php&#39;\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m   |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     data\u001b[33m:\u001b[39m {\n \u001b[90m 7 |\u001b[39m       username\u001b[33m:\u001b[39m \u001b[32m&#39;testuser&#39;\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 8 |\u001b[39m       password\u001b[33m:\u001b[39m \u001b[32m&#39;123&#39;\u001b[39m\u001b[0m&quot;
+  }
+]</pre></div>
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › login-error.spec.js › Login über UI schlägt fehl (mit Mock)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1361</td>
+        <td>4.1.2026, 17:37:02</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1361ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:02</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › login.spec.js › Login über UI funktioniert (mit Mock)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1380</td>
+        <td>4.1.2026, 17:37:03</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1380ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:03</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Die Webseite hat ein sichtbares Suchfeld</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1364</td>
+        <td>4.1.2026, 17:37:04</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1364ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:04</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              <div style="margin-top:6px;"><b>stdout:</b><pre>🔍 Suchfeld gefunden über: input[type=&quot;search&quot;]
+</pre></div>
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Man kann einen Suchbegriff eingeben</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1421</td>
+        <td>4.1.2026, 17:37:04</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1421ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:04</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should display cart button with initial count</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1453</td>
+        <td>4.1.2026, 17:37:04</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1453ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:04</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should open cart popup and display items</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2504</td>
+        <td>4.1.2026, 17:37:04</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2504ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:04</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › suche.spec.js › Suchfunktion – Basis- und Funktionstests › Die Suche zeigt Suchergebnisse an (falls unterstützt)</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2957</td>
+        <td>4.1.2026, 17:37:04</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2957ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:04</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should add item to cart from product listing</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2586</td>
+        <td>4.1.2026, 17:37:05</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2586ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:05</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should add multiple quantities of item to cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2527</td>
+        <td>4.1.2026, 17:37:05</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2527ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:05</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should close cart popup when X button is clicked</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1711</td>
+        <td>4.1.2026, 17:37:06</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1711ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:06</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should increase item quantity in cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3875</td>
+        <td>4.1.2026, 17:37:04</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3875ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:04</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should display correct total price calculation</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2454</td>
+        <td>4.1.2026, 17:37:06</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2454ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:06</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should decrease item quantity in cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>4025</td>
+        <td>4.1.2026, 17:37:05</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 4025ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:05</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should show empty cart message when cart is empty</td>
+        <td>undefined:undefined:undefined</td>
+        <td>1923</td>
+        <td>4.1.2026, 17:37:07</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 1923ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:07</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should remove item when quantity reaches 0</td>
+        <td>undefined:undefined:undefined</td>
+        <td>4307</td>
+        <td>4.1.2026, 17:37:05</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 4307ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:05</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should prevent adding more than available stock</td>
+        <td>undefined:undefined:undefined</td>
+        <td>2462</td>
+        <td>4.1.2026, 17:37:07</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 2462ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:07</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      <tr>
+        <td class="passed">passed</td>
+        <td> › url-g12 › warenkorb.spec.js › Shopping Cart Functionality › should navigate to checkout from cart</td>
+        <td>undefined:undefined:undefined</td>
+        <td>3809</td>
+        <td>4.1.2026, 17:37:07</td>
+        <td>
+      <details class="test">
+        <summary>anzeigen</summary>
+
+        <div class="small"><b>Expected:</b> passed &nbsp; <b>Timeout:</b> 30000</div>
+        
+
+        <h4 style="margin:10px 0 6px;">Results (inkl. Retries)</h4>
+        
+            <div style="border:1px solid #e0e0e0; border-radius:8px; padding:8px; margin:8px 0; background:#fff;">
+              <div>
+                <span class="passed">passed</span>
+                <span class="pill">retry: 0</span>
+                <span class="pill">duration: 3809ms</span>
+                <span class="pill">start: 4.1.2026, 17:37:07</span>
+              </div>
+
+              
+              
+              
+              
+
+              
+
+              
+              
+
+              
+            </div>
+          
+      </details>
+    </td>
+      </tr>
+    
+      </tbody>
+    </table>
+  </details>
   
 </div>
+
 </body>
 </html>
